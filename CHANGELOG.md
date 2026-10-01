@@ -2,6 +2,8 @@
 
 ## 0.3.5 - Unreleased
 
+- Wrapping: stop leaving a stray letter on the previous line when an orphan phrase like `with  the` has extra spaces.
+
 ## 0.3.4 (2026-09-13)
 
 - Dependencies: update Marked for fixes to nested links, emphasis, and blockquote parsing.
