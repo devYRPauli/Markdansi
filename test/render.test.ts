@@ -143,6 +143,16 @@ describe("wrapping", () => {
     expect(out).toBe("Run the tool\nwith  the cache\nenabled and watch.\n");
   });
 
+  it("keeps extra spaces in orphan phrases inside wrapped table cells", () => {
+    const out = strip("| note |\n|---|\n| Run the tool with  the cache enabled |", {
+      ...noColor,
+      width: 30,
+      tableBorder: "ascii",
+      tableTruncate: false,
+    });
+    expect(out).toContain("| Run the tool             |\n| with  the cache enabled  |");
+  });
+
   it("does not treat punctuated words as orphan candidates", () => {
     expect(wrapText("hello the, world", 11, true)).toEqual(["hello the,", "world"]);
   });

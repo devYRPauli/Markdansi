@@ -2,7 +2,7 @@
 
 ## 0.3.5 - Unreleased
 
-- Wrapping: stop leaving a stray letter on the previous line when an orphan phrase like `with  the` has extra spaces.
+- Wrapping: stop leaving a stray letter on the previous line when an orphan phrase like `with  the` has extra spaces (#20, thanks @devYRPauli).
 
 ## 0.3.4 (2026-09-13)
 
