@@ -44,6 +44,7 @@ The built-in theme names are `default`, `dim`, `bright`, `solarized`, `monochrom
 - Fenced code uses a box by default, displays a language label when present, and can wrap or show a line-number gutter.
 - Links use OSC-8 when enabled and supported. Without hyperlinks, inline links render as `label (URL)` and autolinks render as the URL.
 - `wrap: false` disables hard wrapping and causes `width` to be ignored.
+- Paragraphs and wrapped table cells keep source spacing within phrases when moving trailing articles or prepositions to the next line.
 - Reference definitions with indented title continuations are kept together instead of becoming boxed code.
 
 Markdansi does not render images, footnotes, or math, and it does not interpret raw HTML or bundle a syntax highlighter.

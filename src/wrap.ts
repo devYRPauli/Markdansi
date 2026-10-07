@@ -24,11 +24,7 @@ export function wrapText(text: string, width: number, wrap: boolean): string[] {
   const orphanPhraseTail = (s: string): string | null => {
     const trimmed = trimEndSpaces(s);
     const phrase = trimmed.match(/\b(with|in|on|of|to|for)\s+(a|an|the)$/i);
-    if (phrase) {
-      const preposition = phrase[1];
-      const article = phrase[2];
-      if (preposition && article) return `${preposition} ${article}`;
-    }
+    if (phrase) return phrase[0];
 
     const single = trimmed.match(/\b(a|an|the|to|of|with|and|or|in|on|for)$/i);
     return single?.[1] ?? null;
