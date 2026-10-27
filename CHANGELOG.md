@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Blockquotes: fit quoted content beside the prefix and keep code boxes, list indentation, and nested quotes intact.
+
 ## 0.3.7 (2026-10-23)
 
 **Highlights:** Restore OSC progress controls lost in 0.3.6 and preserve literal Markdown in streamed fenced code.
