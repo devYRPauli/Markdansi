@@ -400,7 +400,8 @@ function renderParagraph(node: Paragraph, ctx: RenderContext): string[] {
 function renderHeading(node: Heading, ctx: RenderContext): string[] {
   const text = renderInline(node.children, ctx);
   const styled = ctx.style(text, ctx.options.theme.heading);
-  return [`\n${styled}\n`];
+  const lines = wrapWithPrefix(styled, ctx.options.width ?? 80, ctx.options.wrap);
+  return [`\n${lines.join("\n")}\n`];
 }
 
 function renderHr(ctx: RenderContext): string[] {

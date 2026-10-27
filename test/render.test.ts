@@ -331,6 +331,11 @@ describe("blockquotes", () => {
     expect(out).toBe("│ one two three four\n│ five six seven\n│ eight nine ten\n");
   });
 
+  it("wraps quoted headings to the width left beside the prefix", () => {
+    const out = strip("> # one two three four five six", { ...noColor, width: 20 });
+    expect(out).toBe("│ \n│ one two three four\n│ five six\n");
+  });
+
   it("prefixes quoted lines without wrapping when wrap is off", () => {
     const out = strip("> one two three four five six seven eight nine ten", {
       ...noColor,

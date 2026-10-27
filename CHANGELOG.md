@@ -3,6 +3,7 @@
 ## Unreleased
 
 - Blockquotes: fit quoted content beside the prefix and keep code boxes, list indentation, and nested quotes intact.
+- Headings: wrap long headings to the width, as paragraphs do.
 
 ## 0.3.7 (2026-10-23)
 
